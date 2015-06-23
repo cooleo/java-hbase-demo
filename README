@@ -1,5 +1,11 @@
 ## Install hbase
 
+start-dfs.sh
+
+start-hbase.sh
+
+hbase-daemon.sh start thrift2
+
 ## Install maven
 
 ## Run start project

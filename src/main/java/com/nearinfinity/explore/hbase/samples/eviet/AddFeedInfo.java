@@ -58,12 +58,12 @@ public class AddFeedInfo {
 
 
         Put put = new Put(Bytes.toBytes("feed12346"));
-        put.add(FeedInfoConstants.FEEDINFO_FAMILY, FeedInfoConstants.FEED_TITLE_QULIFIER, Bytes.toBytes(title));
-        put.add(FeedInfoConstants.FEEDINFO_FAMILY, FeedInfoConstants.FEED_DESRIPTION_QULIFIER, Bytes.toBytes(description));
-        put.add(FeedInfoConstants.FEEDINFO_FAMILY, FeedInfoConstants.FEED_THUMB_QULIFIER, Bytes.toBytes(thumb));
-        put.add(FeedInfoConstants.FEEDINFO_FAMILY, FeedInfoConstants.FEED_HOSTNAME_QULIFIER, Bytes.toBytes(hostName));
-        put.add(FeedInfoConstants.FEEDINFO_FAMILY, FeedInfoConstants.FEED_REDIRECTURL_QULIFIER, Bytes.toBytes(redirectUrl));
-        put.add(FeedInfoConstants.FEEDINFO_FAMILY, FeedInfoConstants.FEED_TYPE_QULIFIER, Bytes.toBytes(feedType));
+        put.addColumn(FeedInfoConstants.FEEDINFO_FAMILY, FeedInfoConstants.FEED_TITLE_QULIFIER, Bytes.toBytes(title));
+        put.addColumn(FeedInfoConstants.FEEDINFO_FAMILY, FeedInfoConstants.FEED_DESRIPTION_QULIFIER, Bytes.toBytes(description));
+        put.addColumn(FeedInfoConstants.FEEDINFO_FAMILY, FeedInfoConstants.FEED_THUMB_QULIFIER, Bytes.toBytes(thumb));
+        put.addColumn(FeedInfoConstants.FEEDINFO_FAMILY, FeedInfoConstants.FEED_HOSTNAME_QULIFIER, Bytes.toBytes(hostName));
+        put.addColumn(FeedInfoConstants.FEEDINFO_FAMILY, FeedInfoConstants.FEED_REDIRECTURL_QULIFIER, Bytes.toBytes(redirectUrl));
+        put.addColumn(FeedInfoConstants.FEEDINFO_FAMILY, FeedInfoConstants.FEED_TYPE_QULIFIER, Bytes.toBytes(feedType));
         for(int i = 0; i<countries.size();i++){
             String iString = String.format("%d",i);
             byte[] invid =  Bytes.toBytes(iString);

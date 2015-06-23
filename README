@@ -9,3 +9,8 @@ hbase-daemon.sh start thrift2
 ## Install maven
 
 ## Run start project
+
+## Hbase shell document
+
+https://wiki.apache.org/hadoop/Hbase/Shell
+create 'liendien',{NAME=>'family1'}

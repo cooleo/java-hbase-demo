@@ -14,3 +14,6 @@ hbase-daemon.sh start thrift2
 
 https://wiki.apache.org/hadoop/Hbase/Shell
 create 'liendien',{NAME=>'family1'}
+
+scan 'btestfeed', { COLUMNS => 'info:title', LIMIT => 10, FILTER => "ValueFilter( =, 'binaryprefix:hello feed' )" }
+scan 'btestfeed', { COLUMNS => 'category', LIMIT => 10, FILTER => "ValueFilter( =, 'binaryprefix:Tinh Cam' )" }
